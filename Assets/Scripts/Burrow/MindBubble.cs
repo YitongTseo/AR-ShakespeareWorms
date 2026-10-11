@@ -86,11 +86,14 @@ namespace Burrow
                 _shellMr.material.color = Color.Lerp(new Color(0.8f, 0.9f, 1f, 1f), new Color(1f, 0.55f, 0.15f, 1f) * (1f + _heat), _heat);
         }
 
+        Vector3 _launch;     // direction of the flick that sent it home, bends the flight path
+
         IEnumerator FlyTo(Vector3 target, float seconds, System.Action done)
         {
             Busy = true;
             var from = transform.position; float s0 = transform.localScale.x;
-            var mid = (from + target) * 0.5f + Vector3.up * 0.25f + Vector3.Cross(target - from, Vector3.up).normalized * 0.12f;
+            var mid = (from + target) * 0.5f + Vector3.up * 0.25f + Vector3.Cross(target - from, Vector3.up).normalized * 0.12f + _launch * 0.5f;
+            _launch = Vector3.zero;
             float t = 0f;
             while (t < 1f)
             {
@@ -106,9 +109,13 @@ namespace Burrow
             done?.Invoke();
         }
 
-        public void Return()
+        public void Return() { Return(Vector3.zero); }
+
+        // Sends the mind home. A non-zero `launch` (a flick) throws it that way first.
+        public void Return(Vector3 launch)
         {
             if (Busy) return;
+            _launch = launch;
             StartCoroutine(Flash(() =>
             {
                 _w.Bubbles.Remove(this);

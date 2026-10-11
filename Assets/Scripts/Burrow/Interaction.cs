@@ -11,6 +11,7 @@ namespace Burrow
     //         and it flashes and flies home. Let go sooner and it just stays where you put it.
     //   PINCH inside the text world: one hand moves it; two hands move and turn it.
     //   PINCH held anywhere else: push-to-talk (Listener). Release to send.
+    //   FLICK the index finger through a bubble (a fast swipe, no pinch): it flies home.
     public class Interaction : MonoBehaviour
     {
         public MinimalHandVisualizer hands;
@@ -19,6 +20,7 @@ namespace Burrow
         public Listener listener;
         public float pinchOn = 0.018f, pinchOff = 0.03f, talkAfter = 0.5f;
         public float dwellSeconds = 1.6f, rayRange = 8f, holdToReturn = 3.0f, bubbleReach = 0.11f;
+        public float flickSpeed = 1.1f;          // m/s of the index tip that counts as a flick
 
         enum Mode { None, GrabWorld, GrabBubble, Talk }
         class Hand
@@ -26,6 +28,7 @@ namespace Burrow
             public bool down; public float t0; public Mode mode; public Vector3 pinch, grabOffset;
             public MindBubble bubble; public float heat;
             public LineRenderer ray; public DomeView target; public float dwell;
+            public Vector3 tipPrev; public bool tipValid; public float flickCooldown;
         }
         readonly Hand[] _h = { new Hand(), new Hand() };
         int _loading;
@@ -52,7 +55,7 @@ namespace Burrow
             if (loader == null || !loader.IsLoaded) return;
             for (int i = 0; i < 2; i++) Pinch(i);
             GrabWorld();
-            for (int i = 0; i < 2; i++) Point(i);
+            for (int i = 0; i < 2; i++) { Point(i); Flick(i); }
         }
 
         void Cancel(Hand h)
@@ -183,6 +186,35 @@ namespace Burrow
                 h.dwell = 0f;
                 if (_loading == 0) StartCoroutine(SummonFrom(target));
                 SetTarget(h, null);
+            }
+        }
+
+        // ------------------------------------------------------------------ flick: swat a bubble home
+        void Flick(int i)
+        {
+            var h = _h[i];
+            h.flickCooldown -= Time.deltaTime;
+            if (!hands.TryGetJoint(i, UnityEngine.XR.Hands.XRHandJointID.IndexTip, out var tip)) { h.tipValid = false; return; }
+            if (!h.tipValid) { h.tipPrev = tip; h.tipValid = true; return; }
+            var delta = tip - h.tipPrev; float dt = Mathf.Max(Time.deltaTime, 1e-3f);
+            var vel = delta / dt;
+            h.tipPrev = tip;
+            if (h.down || h.flickCooldown > 0f || vel.magnitude < flickSpeed) return;
+            var world = TextWorld.Instance; if (world == null) return;
+            // did the fingertip's path this frame pass through (or just graze) a bubble?
+            foreach (var b in world.Bubbles)
+            {
+                if (b.Busy) continue;
+                var c = b.transform.position;
+                float t = Mathf.Clamp01(Vector3.Dot(c - h.tipPrev + delta, delta) / Mathf.Max(delta.sqrMagnitude, 1e-6f));
+                var closest = (tip - delta) + delta * t;
+                if (Vector3.Distance(closest, c) < b.Radius + 0.04f)
+                {
+                    Debug.Log($"[World] flicked {b.Dome.Mind.name} home at {vel.magnitude:F1} m/s");
+                    b.Return(vel.normalized);
+                    h.flickCooldown = 1f;
+                    break;
+                }
             }
         }
 

@@ -1,0 +1,1958 @@
+{
+ "count": 195,
+ "total_bytes": 10159312,
+ "seed_rule": "1000 + id",
+ "minds": [
+  {
+   "id": 0,
+   "name": "Oscar",
+   "flask": 0,
+   "gen": 1,
+   "fitness": 3.499062519390979,
+   "seed": 1000,
+   "file": "mind_0.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 1,
+   "name": "Niaj",
+   "flask": 0,
+   "gen": 4,
+   "fitness": 3.8834434565623215,
+   "seed": 1001,
+   "file": "mind_1.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 2,
+   "name": "Peggy",
+   "flask": 0,
+   "gen": 5,
+   "fitness": 3.739113209759829,
+   "seed": 1002,
+   "file": "mind_2.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 3,
+   "name": "Liam",
+   "flask": 0,
+   "gen": 9,
+   "fitness": 4.527273984410193,
+   "seed": 1003,
+   "file": "mind_3.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 4,
+   "name": "Frank",
+   "flask": 0,
+   "gen": 14,
+   "fitness": 24.41877933598527,
+   "seed": 1004,
+   "file": "mind_4.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 5,
+   "name": "Peggy",
+   "flask": 0,
+   "gen": 15,
+   "fitness": 23.694676210425175,
+   "seed": 1005,
+   "file": "mind_5.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 6,
+   "name": "Heidi",
+   "flask": 0,
+   "gen": 16,
+   "fitness": 34.13177107297744,
+   "seed": 1006,
+   "file": "mind_6.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 7,
+   "name": "Eve",
+   "flask": 0,
+   "gen": 17,
+   "fitness": 32.597843266493165,
+   "seed": 1007,
+   "file": "mind_7.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 8,
+   "name": "Carol",
+   "flask": 0,
+   "gen": 18,
+   "fitness": 29.155661824180363,
+   "seed": 1008,
+   "file": "mind_8.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 9,
+   "name": "Heidi",
+   "flask": 0,
+   "gen": 19,
+   "fitness": 20.567553762751125,
+   "seed": 1009,
+   "file": "mind_9.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 10,
+   "name": "Carol",
+   "flask": 0,
+   "gen": 20,
+   "fitness": 28.64346315505346,
+   "seed": 1010,
+   "file": "mind_10.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 11,
+   "name": "Mallory",
+   "flask": 0,
+   "gen": 21,
+   "fitness": 25.950314374714573,
+   "seed": 1011,
+   "file": "mind_11.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 12,
+   "name": "Judy",
+   "flask": 0,
+   "gen": 22,
+   "fitness": 24.25798715001845,
+   "seed": 1012,
+   "file": "mind_12.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 13,
+   "name": "Alice",
+   "flask": 0,
+   "gen": 23,
+   "fitness": 27.756625010714348,
+   "seed": 1013,
+   "file": "mind_13.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 14,
+   "name": "Dave",
+   "flask": 0,
+   "gen": 24,
+   "fitness": 32.31886914808358,
+   "seed": 1014,
+   "file": "mind_14.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 15,
+   "name": "Ruth",
+   "flask": 0,
+   "gen": 25,
+   "fitness": 29.310517561776138,
+   "seed": 1015,
+   "file": "mind_15.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 16,
+   "name": "Trent",
+   "flask": 0,
+   "gen": 26,
+   "fitness": 28.68390936488217,
+   "seed": 1016,
+   "file": "mind_16.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 17,
+   "name": "Frank",
+   "flask": 0,
+   "gen": 27,
+   "fitness": 31.46136019656985,
+   "seed": 1017,
+   "file": "mind_17.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 18,
+   "name": "Oscar",
+   "flask": 0,
+   "gen": 28,
+   "fitness": 28.695659558454253,
+   "seed": 1018,
+   "file": "mind_18.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 19,
+   "name": "Dave",
+   "flask": 0,
+   "gen": 29,
+   "fitness": 26.816130390600154,
+   "seed": 1019,
+   "file": "mind_19.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 20,
+   "name": "Liam",
+   "flask": 0,
+   "gen": 30,
+   "fitness": 32.69515477282668,
+   "seed": 1020,
+   "file": "mind_20.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 21,
+   "name": "Judy",
+   "flask": 0,
+   "gen": 31,
+   "fitness": 35.568753519488396,
+   "seed": 1021,
+   "file": "mind_21.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 22,
+   "name": "Peggy",
+   "flask": 0,
+   "gen": 32,
+   "fitness": 25.715997701760852,
+   "seed": 1022,
+   "file": "mind_22.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 23,
+   "name": "Liam",
+   "flask": 0,
+   "gen": 33,
+   "fitness": 38.43200629655711,
+   "seed": 1023,
+   "file": "mind_23.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 24,
+   "name": "Judy",
+   "flask": 0,
+   "gen": 34,
+   "fitness": 36.52118485477252,
+   "seed": 1024,
+   "file": "mind_24.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 25,
+   "name": "Ruth",
+   "flask": 0,
+   "gen": 35,
+   "fitness": 26.38481733848132,
+   "seed": 1025,
+   "file": "mind_25.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 26,
+   "name": "Bob",
+   "flask": 0,
+   "gen": 36,
+   "fitness": 32.02913209942042,
+   "seed": 1026,
+   "file": "mind_26.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 27,
+   "name": "Grace",
+   "flask": 0,
+   "gen": 37,
+   "fitness": 40.00501957986381,
+   "seed": 1027,
+   "file": "mind_27.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 28,
+   "name": "Frank",
+   "flask": 0,
+   "gen": 38,
+   "fitness": 31.277506492622198,
+   "seed": 1028,
+   "file": "mind_28.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 29,
+   "name": "Dave",
+   "flask": 0,
+   "gen": 39,
+   "fitness": 35.5595913303964,
+   "seed": 1029,
+   "file": "mind_29.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 30,
+   "name": "Judy",
+   "flask": 0,
+   "gen": 40,
+   "fitness": 25.366122608336727,
+   "seed": 1030,
+   "file": "mind_30.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 31,
+   "name": "Carol",
+   "flask": 0,
+   "gen": 41,
+   "fitness": 27.153381677829167,
+   "seed": 1031,
+   "file": "mind_31.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 32,
+   "name": "Heidi",
+   "flask": 0,
+   "gen": 42,
+   "fitness": 29.591184328963458,
+   "seed": 1032,
+   "file": "mind_32.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 33,
+   "name": "Carol",
+   "flask": 0,
+   "gen": 43,
+   "fitness": 31.97492162484801,
+   "seed": 1033,
+   "file": "mind_33.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 34,
+   "name": "Heidi",
+   "flask": 0,
+   "gen": 44,
+   "fitness": 35.55289117556767,
+   "seed": 1034,
+   "file": "mind_34.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 35,
+   "name": "Quentin",
+   "flask": 0,
+   "gen": 45,
+   "fitness": 30.202028125958247,
+   "seed": 1035,
+   "file": "mind_35.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 36,
+   "name": "Heidi",
+   "flask": 0,
+   "gen": 46,
+   "fitness": 28.802605812461902,
+   "seed": 1036,
+   "file": "mind_36.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 37,
+   "name": "Ivan",
+   "flask": 0,
+   "gen": 47,
+   "fitness": 27.19425801090435,
+   "seed": 1037,
+   "file": "mind_37.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 38,
+   "name": "Heidi",
+   "flask": 0,
+   "gen": 48,
+   "fitness": 27.104965914656514,
+   "seed": 1038,
+   "file": "mind_38.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 39,
+   "name": "Alice",
+   "flask": 0,
+   "gen": 49,
+   "fitness": 0.0,
+   "seed": 1039,
+   "file": "mind_39.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 40,
+   "name": "Alice",
+   "flask": 0,
+   "gen": 50,
+   "fitness": 0.0,
+   "seed": 1040,
+   "file": "mind_40.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 41,
+   "name": "Alice",
+   "flask": 0,
+   "gen": 51,
+   "fitness": 0.0,
+   "seed": 1041,
+   "file": "mind_41.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 42,
+   "name": "Alice",
+   "flask": 0,
+   "gen": 52,
+   "fitness": 0.0,
+   "seed": 1042,
+   "file": "mind_42.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 43,
+   "name": "Dave",
+   "flask": 0,
+   "gen": 53,
+   "fitness": 28.045608638517955,
+   "seed": 1043,
+   "file": "mind_43.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 44,
+   "name": "Alice",
+   "flask": 0,
+   "gen": 54,
+   "fitness": 28.229677035379023,
+   "seed": 1044,
+   "file": "mind_44.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 45,
+   "name": "Bob",
+   "flask": 0,
+   "gen": 55,
+   "fitness": 27.650108969032193,
+   "seed": 1045,
+   "file": "mind_45.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 46,
+   "name": "Peggy",
+   "flask": 0,
+   "gen": 56,
+   "fitness": 21.624077851702864,
+   "seed": 1046,
+   "file": "mind_46.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 47,
+   "name": "Frank",
+   "flask": 0,
+   "gen": 57,
+   "fitness": 33.36845118425683,
+   "seed": 1047,
+   "file": "mind_47.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 48,
+   "name": "Liam",
+   "flask": 0,
+   "gen": 58,
+   "fitness": 23.72677293176113,
+   "seed": 1048,
+   "file": "mind_48.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 49,
+   "name": "Dave",
+   "flask": 0,
+   "gen": 59,
+   "fitness": 24.70207359992316,
+   "seed": 1049,
+   "file": "mind_49.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 50,
+   "name": "Alice",
+   "flask": 0,
+   "gen": 60,
+   "fitness": 0.0,
+   "seed": 1050,
+   "file": "mind_50.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 51,
+   "name": "Sybil",
+   "flask": 0,
+   "gen": 61,
+   "fitness": 34.64142712358759,
+   "seed": 1051,
+   "file": "mind_51.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 52,
+   "name": "Oscar",
+   "flask": 0,
+   "gen": 62,
+   "fitness": 33.322139641606654,
+   "seed": 1052,
+   "file": "mind_52.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 53,
+   "name": "Peggy",
+   "flask": 0,
+   "gen": 63,
+   "fitness": 34.66438091102697,
+   "seed": 1053,
+   "file": "mind_53.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 54,
+   "name": "Dave",
+   "flask": 0,
+   "gen": 64,
+   "fitness": 29.591304735143588,
+   "seed": 1054,
+   "file": "mind_54.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 55,
+   "name": "Carol",
+   "flask": 0,
+   "gen": 65,
+   "fitness": 36.864852072779925,
+   "seed": 1055,
+   "file": "mind_55.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 56,
+   "name": "Alice",
+   "flask": 0,
+   "gen": 66,
+   "fitness": 29.418943844907023,
+   "seed": 1056,
+   "file": "mind_56.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 57,
+   "name": "Quentin",
+   "flask": 0,
+   "gen": 67,
+   "fitness": 38.31764076219769,
+   "seed": 1057,
+   "file": "mind_57.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 58,
+   "name": "Trent",
+   "flask": 0,
+   "gen": 68,
+   "fitness": 30.57846405229917,
+   "seed": 1058,
+   "file": "mind_58.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 59,
+   "name": "Quentin",
+   "flask": 0,
+   "gen": 69,
+   "fitness": 34.72237392384196,
+   "seed": 1059,
+   "file": "mind_59.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 60,
+   "name": "Carol",
+   "flask": 0,
+   "gen": 70,
+   "fitness": 25.042441914109233,
+   "seed": 1060,
+   "file": "mind_60.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 61,
+   "name": "Alice",
+   "flask": 0,
+   "gen": 71,
+   "fitness": 0.0,
+   "seed": 1061,
+   "file": "mind_61.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 62,
+   "name": "Kara",
+   "flask": 0,
+   "gen": 72,
+   "fitness": 28.028185828891967,
+   "seed": 1062,
+   "file": "mind_62.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 63,
+   "name": "Judy",
+   "flask": 0,
+   "gen": 73,
+   "fitness": 26.15104586243805,
+   "seed": 1063,
+   "file": "mind_63.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 64,
+   "name": "Ivan",
+   "flask": 0,
+   "gen": 74,
+   "fitness": 38.94506281652296,
+   "seed": 1064,
+   "file": "mind_64.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 65,
+   "name": "Carol",
+   "flask": 0,
+   "gen": 75,
+   "fitness": 30.546761297233665,
+   "seed": 1065,
+   "file": "mind_65.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 66,
+   "name": "Trent",
+   "flask": 0,
+   "gen": 76,
+   "fitness": 26.15413737936081,
+   "seed": 1066,
+   "file": "mind_66.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 67,
+   "name": "Ruth",
+   "flask": 0,
+   "gen": 77,
+   "fitness": 35.09522237222244,
+   "seed": 1067,
+   "file": "mind_67.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 68,
+   "name": "Kara",
+   "flask": 0,
+   "gen": 78,
+   "fitness": 36.356505495490126,
+   "seed": 1068,
+   "file": "mind_68.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 69,
+   "name": "Judy",
+   "flask": 0,
+   "gen": 79,
+   "fitness": 41.889694865565694,
+   "seed": 1069,
+   "file": "mind_69.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 70,
+   "name": "Frank",
+   "flask": 0,
+   "gen": 80,
+   "fitness": 38.60459513400308,
+   "seed": 1070,
+   "file": "mind_70.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 71,
+   "name": "Grace",
+   "flask": 0,
+   "gen": 81,
+   "fitness": 31.82193348704499,
+   "seed": 1071,
+   "file": "mind_71.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 72,
+   "name": "Trent",
+   "flask": 0,
+   "gen": 82,
+   "fitness": 31.366366150676555,
+   "seed": 1072,
+   "file": "mind_72.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 73,
+   "name": "Niaj",
+   "flask": 0,
+   "gen": 83,
+   "fitness": 32.57068582909996,
+   "seed": 1073,
+   "file": "mind_73.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 74,
+   "name": "Heidi",
+   "flask": 0,
+   "gen": 84,
+   "fitness": 36.425406450842715,
+   "seed": 1074,
+   "file": "mind_74.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 75,
+   "name": "Dave",
+   "flask": 0,
+   "gen": 85,
+   "fitness": 33.108776244983105,
+   "seed": 1075,
+   "file": "mind_75.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 76,
+   "name": "Eve",
+   "flask": 0,
+   "gen": 86,
+   "fitness": 33.6243974061375,
+   "seed": 1076,
+   "file": "mind_76.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 77,
+   "name": "Alice",
+   "flask": 0,
+   "gen": 87,
+   "fitness": 34.43041652261223,
+   "seed": 1077,
+   "file": "mind_77.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 78,
+   "name": "Alice",
+   "flask": 0,
+   "gen": 88,
+   "fitness": 0.0,
+   "seed": 1078,
+   "file": "mind_78.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 79,
+   "name": "Frank",
+   "flask": 0,
+   "gen": 89,
+   "fitness": 34.646881444004,
+   "seed": 1079,
+   "file": "mind_79.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 80,
+   "name": "Judy",
+   "flask": 0,
+   "gen": 90,
+   "fitness": 35.27902772401142,
+   "seed": 1080,
+   "file": "mind_80.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 81,
+   "name": "Quentin",
+   "flask": 0,
+   "gen": 91,
+   "fitness": 35.3255779575459,
+   "seed": 1081,
+   "file": "mind_81.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 82,
+   "name": "Carol",
+   "flask": 0,
+   "gen": 92,
+   "fitness": 30.48319508882839,
+   "seed": 1082,
+   "file": "mind_82.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 83,
+   "name": "Trent",
+   "flask": 0,
+   "gen": 93,
+   "fitness": 26.34505850014643,
+   "seed": 1083,
+   "file": "mind_83.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 84,
+   "name": "Ivan",
+   "flask": 0,
+   "gen": 94,
+   "fitness": 30.661720653456246,
+   "seed": 1084,
+   "file": "mind_84.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 85,
+   "name": "Bob",
+   "flask": 0,
+   "gen": 95,
+   "fitness": 29.15965940003544,
+   "seed": 1085,
+   "file": "mind_85.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 86,
+   "name": "Mallory",
+   "flask": 0,
+   "gen": 96,
+   "fitness": 29.13986978387875,
+   "seed": 1086,
+   "file": "mind_86.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 87,
+   "name": "Sybil",
+   "flask": 0,
+   "gen": 97,
+   "fitness": 35.33731830891629,
+   "seed": 1087,
+   "file": "mind_87.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 88,
+   "name": "Grace",
+   "flask": 0,
+   "gen": 98,
+   "fitness": 32.91650744460476,
+   "seed": 1088,
+   "file": "mind_88.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 89,
+   "name": "Sybil",
+   "flask": 0,
+   "gen": 99,
+   "fitness": 35.88508548077378,
+   "seed": 1089,
+   "file": "mind_89.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 90,
+   "name": "Niaj",
+   "flask": 0,
+   "gen": 100,
+   "fitness": 26.588945147972584,
+   "seed": 1090,
+   "file": "mind_90.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 91,
+   "name": "Mallory",
+   "flask": 0,
+   "gen": 101,
+   "fitness": 40.133443930971445,
+   "seed": 1091,
+   "file": "mind_91.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 92,
+   "name": "Judy",
+   "flask": 0,
+   "gen": 102,
+   "fitness": 30.921092391874556,
+   "seed": 1092,
+   "file": "mind_92.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 93,
+   "name": "Judy",
+   "flask": 0,
+   "gen": 103,
+   "fitness": 29.946949323412127,
+   "seed": 1093,
+   "file": "mind_93.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 94,
+   "name": "Judy",
+   "flask": 0,
+   "gen": 104,
+   "fitness": 41.40651522815592,
+   "seed": 1094,
+   "file": "mind_94.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 95,
+   "name": "Judy",
+   "flask": 1,
+   "gen": 2,
+   "fitness": 4.801323601327641,
+   "seed": 1095,
+   "file": "mind_95.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 96,
+   "name": "Mallory",
+   "flask": 1,
+   "gen": 3,
+   "fitness": 5.028842777003041,
+   "seed": 1096,
+   "file": "mind_96.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 97,
+   "name": "Liam",
+   "flask": 1,
+   "gen": 6,
+   "fitness": 3.9807325538309564,
+   "seed": 1097,
+   "file": "mind_97.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 98,
+   "name": "Dave",
+   "flask": 1,
+   "gen": 7,
+   "fitness": 5.1656455480289605,
+   "seed": 1098,
+   "file": "mind_98.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 99,
+   "name": "Mallory",
+   "flask": 1,
+   "gen": 8,
+   "fitness": 3.185964155432111,
+   "seed": 1099,
+   "file": "mind_99.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 100,
+   "name": "Bob",
+   "flask": 1,
+   "gen": 10,
+   "fitness": 3.671779152992445,
+   "seed": 1100,
+   "file": "mind_100.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 101,
+   "name": "Peggy",
+   "flask": 1,
+   "gen": 11,
+   "fitness": 3.680215526415911,
+   "seed": 1101,
+   "file": "mind_101.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 102,
+   "name": "Ivan",
+   "flask": 1,
+   "gen": 12,
+   "fitness": 4.0746531807430335,
+   "seed": 1102,
+   "file": "mind_102.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 103,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 13,
+   "fitness": 43.98339520847725,
+   "seed": 1103,
+   "file": "mind_103.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 104,
+   "name": "Niaj",
+   "flask": 1,
+   "gen": 14,
+   "fitness": 24.71769139612611,
+   "seed": 1104,
+   "file": "mind_104.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 105,
+   "name": "Peggy",
+   "flask": 1,
+   "gen": 15,
+   "fitness": 26.686426967180008,
+   "seed": 1105,
+   "file": "mind_105.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 106,
+   "name": "Liam",
+   "flask": 1,
+   "gen": 16,
+   "fitness": 27.024460399744285,
+   "seed": 1106,
+   "file": "mind_106.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 107,
+   "name": "Carol",
+   "flask": 1,
+   "gen": 17,
+   "fitness": 32.977781003538425,
+   "seed": 1107,
+   "file": "mind_107.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 108,
+   "name": "Peggy",
+   "flask": 1,
+   "gen": 18,
+   "fitness": 27.533325796153278,
+   "seed": 1108,
+   "file": "mind_108.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 109,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 19,
+   "fitness": 20.824128216956264,
+   "seed": 1109,
+   "file": "mind_109.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 110,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 20,
+   "fitness": 22.111758720688265,
+   "seed": 1110,
+   "file": "mind_110.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 111,
+   "name": "Judy",
+   "flask": 1,
+   "gen": 21,
+   "fitness": 28.333552349744206,
+   "seed": 1111,
+   "file": "mind_111.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 112,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 22,
+   "fitness": 25.619004437547,
+   "seed": 1112,
+   "file": "mind_112.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 113,
+   "name": "Judy",
+   "flask": 1,
+   "gen": 23,
+   "fitness": 27.11059501524421,
+   "seed": 1113,
+   "file": "mind_113.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 114,
+   "name": "Peggy",
+   "flask": 1,
+   "gen": 24,
+   "fitness": 24.568917831903104,
+   "seed": 1114,
+   "file": "mind_114.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 115,
+   "name": "Ruth",
+   "flask": 1,
+   "gen": 25,
+   "fitness": 26.81042371868618,
+   "seed": 1115,
+   "file": "mind_115.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 116,
+   "name": "Trent",
+   "flask": 1,
+   "gen": 26,
+   "fitness": 168.92464943373676,
+   "seed": 1116,
+   "file": "mind_116.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 117,
+   "name": "Dave",
+   "flask": 1,
+   "gen": 27,
+   "fitness": 234.19599425767922,
+   "seed": 1117,
+   "file": "mind_117.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 118,
+   "name": "Dave",
+   "flask": 1,
+   "gen": 28,
+   "fitness": 254.14321273975335,
+   "seed": 1118,
+   "file": "mind_118.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 119,
+   "name": "Niaj",
+   "flask": 1,
+   "gen": 29,
+   "fitness": 331.4035632936341,
+   "seed": 1119,
+   "file": "mind_119.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 120,
+   "name": "Ivan",
+   "flask": 1,
+   "gen": 30,
+   "fitness": 205.23787418943766,
+   "seed": 1120,
+   "file": "mind_120.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 121,
+   "name": "Grace",
+   "flask": 1,
+   "gen": 31,
+   "fitness": 164.31757585369598,
+   "seed": 1121,
+   "file": "mind_121.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 122,
+   "name": "Trent",
+   "flask": 1,
+   "gen": 32,
+   "fitness": 181.9034416486766,
+   "seed": 1122,
+   "file": "mind_122.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 123,
+   "name": "Frank",
+   "flask": 1,
+   "gen": 33,
+   "fitness": 226.37238977987946,
+   "seed": 1123,
+   "file": "mind_123.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 124,
+   "name": "Kara",
+   "flask": 1,
+   "gen": 34,
+   "fitness": 277.3180180229013,
+   "seed": 1124,
+   "file": "mind_124.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 125,
+   "name": "Trent",
+   "flask": 1,
+   "gen": 35,
+   "fitness": 214.2006684076318,
+   "seed": 1125,
+   "file": "mind_125.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 126,
+   "name": "Dave",
+   "flask": 1,
+   "gen": 36,
+   "fitness": 153.79543683365097,
+   "seed": 1126,
+   "file": "mind_126.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 127,
+   "name": "Quentin",
+   "flask": 1,
+   "gen": 37,
+   "fitness": 217.10189374898076,
+   "seed": 1127,
+   "file": "mind_127.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 128,
+   "name": "Heidi",
+   "flask": 1,
+   "gen": 38,
+   "fitness": 218.58844816668454,
+   "seed": 1128,
+   "file": "mind_128.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 129,
+   "name": "Dave",
+   "flask": 1,
+   "gen": 39,
+   "fitness": 203.25325193547846,
+   "seed": 1129,
+   "file": "mind_129.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 130,
+   "name": "Grace",
+   "flask": 1,
+   "gen": 40,
+   "fitness": 168.48795893815162,
+   "seed": 1130,
+   "file": "mind_130.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 131,
+   "name": "Niaj",
+   "flask": 1,
+   "gen": 41,
+   "fitness": 321.0631697955233,
+   "seed": 1131,
+   "file": "mind_131.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 132,
+   "name": "Bob",
+   "flask": 1,
+   "gen": 42,
+   "fitness": 187.20923518232507,
+   "seed": 1132,
+   "file": "mind_132.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 133,
+   "name": "Quentin",
+   "flask": 1,
+   "gen": 43,
+   "fitness": 297.98456632187737,
+   "seed": 1133,
+   "file": "mind_133.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 134,
+   "name": "Kara",
+   "flask": 1,
+   "gen": 44,
+   "fitness": 316.5400910304496,
+   "seed": 1134,
+   "file": "mind_134.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 135,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 45,
+   "fitness": 221.67024600925907,
+   "seed": 1135,
+   "file": "mind_135.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 136,
+   "name": "Sybil",
+   "flask": 1,
+   "gen": 46,
+   "fitness": 246.94095667728084,
+   "seed": 1136,
+   "file": "mind_136.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 137,
+   "name": "Eve",
+   "flask": 1,
+   "gen": 47,
+   "fitness": 271.3258206137955,
+   "seed": 1137,
+   "file": "mind_137.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 138,
+   "name": "Mallory",
+   "flask": 1,
+   "gen": 48,
+   "fitness": 269.54741177160173,
+   "seed": 1138,
+   "file": "mind_138.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 139,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 49,
+   "fitness": 0.0,
+   "seed": 1139,
+   "file": "mind_139.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 140,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 50,
+   "fitness": 0.0,
+   "seed": 1140,
+   "file": "mind_140.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 141,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 51,
+   "fitness": 0.0,
+   "seed": 1141,
+   "file": "mind_141.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 142,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 52,
+   "fitness": 0.0,
+   "seed": 1142,
+   "file": "mind_142.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 143,
+   "name": "Bob",
+   "flask": 1,
+   "gen": 53,
+   "fitness": 216.3900523657586,
+   "seed": 1143,
+   "file": "mind_143.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 144,
+   "name": "Bob",
+   "flask": 1,
+   "gen": 54,
+   "fitness": 166.3276135722139,
+   "seed": 1144,
+   "file": "mind_144.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 145,
+   "name": "Sybil",
+   "flask": 1,
+   "gen": 55,
+   "fitness": 155.99414476510938,
+   "seed": 1145,
+   "file": "mind_145.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 146,
+   "name": "Dave",
+   "flask": 1,
+   "gen": 56,
+   "fitness": 229.23783927335714,
+   "seed": 1146,
+   "file": "mind_146.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 147,
+   "name": "Heidi",
+   "flask": 1,
+   "gen": 57,
+   "fitness": 279.92958992438076,
+   "seed": 1147,
+   "file": "mind_147.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 148,
+   "name": "Mallory",
+   "flask": 1,
+   "gen": 58,
+   "fitness": 367.0116396752737,
+   "seed": 1148,
+   "file": "mind_148.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 149,
+   "name": "Peggy",
+   "flask": 1,
+   "gen": 59,
+   "fitness": 271.94741397761567,
+   "seed": 1149,
+   "file": "mind_149.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 150,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 60,
+   "fitness": 0.0,
+   "seed": 1150,
+   "file": "mind_150.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 151,
+   "name": "Liam",
+   "flask": 1,
+   "gen": 61,
+   "fitness": 233.6800518860052,
+   "seed": 1151,
+   "file": "mind_151.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 152,
+   "name": "Trent",
+   "flask": 1,
+   "gen": 62,
+   "fitness": 280.57761335156874,
+   "seed": 1152,
+   "file": "mind_152.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 153,
+   "name": "Heidi",
+   "flask": 1,
+   "gen": 63,
+   "fitness": 204.47775431833622,
+   "seed": 1153,
+   "file": "mind_153.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 154,
+   "name": "Ivan",
+   "flask": 1,
+   "gen": 64,
+   "fitness": 209.64593713314787,
+   "seed": 1154,
+   "file": "mind_154.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 155,
+   "name": "Ivan",
+   "flask": 1,
+   "gen": 65,
+   "fitness": 292.311103868084,
+   "seed": 1155,
+   "file": "mind_155.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 156,
+   "name": "Quentin",
+   "flask": 1,
+   "gen": 66,
+   "fitness": 230.03416437982028,
+   "seed": 1156,
+   "file": "mind_156.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 157,
+   "name": "Niaj",
+   "flask": 1,
+   "gen": 67,
+   "fitness": 468.208920245949,
+   "seed": 1157,
+   "file": "mind_157.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 158,
+   "name": "Bob",
+   "flask": 1,
+   "gen": 68,
+   "fitness": 242.57600991809028,
+   "seed": 1158,
+   "file": "mind_158.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 159,
+   "name": "Dave",
+   "flask": 1,
+   "gen": 69,
+   "fitness": 164.65214938068584,
+   "seed": 1159,
+   "file": "mind_159.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 160,
+   "name": "Liam",
+   "flask": 1,
+   "gen": 70,
+   "fitness": 238.73516179220323,
+   "seed": 1160,
+   "file": "mind_160.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 161,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 71,
+   "fitness": 0.0,
+   "seed": 1161,
+   "file": "mind_161.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 162,
+   "name": "Niaj",
+   "flask": 1,
+   "gen": 72,
+   "fitness": 214.20910706724385,
+   "seed": 1162,
+   "file": "mind_162.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 163,
+   "name": "Peggy",
+   "flask": 1,
+   "gen": 73,
+   "fitness": 278.54718512508094,
+   "seed": 1163,
+   "file": "mind_163.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 164,
+   "name": "Grace",
+   "flask": 1,
+   "gen": 74,
+   "fitness": 161.05451612385116,
+   "seed": 1164,
+   "file": "mind_164.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 165,
+   "name": "Liam",
+   "flask": 1,
+   "gen": 75,
+   "fitness": 185.16639447121622,
+   "seed": 1165,
+   "file": "mind_165.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 166,
+   "name": "Dave",
+   "flask": 1,
+   "gen": 76,
+   "fitness": 180.18416130320577,
+   "seed": 1166,
+   "file": "mind_166.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 167,
+   "name": "Judy",
+   "flask": 1,
+   "gen": 77,
+   "fitness": 179.05902215877956,
+   "seed": 1167,
+   "file": "mind_167.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 168,
+   "name": "Trent",
+   "flask": 1,
+   "gen": 78,
+   "fitness": 266.42852059410376,
+   "seed": 1168,
+   "file": "mind_168.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 169,
+   "name": "Ivan",
+   "flask": 1,
+   "gen": 79,
+   "fitness": 170.82457877351277,
+   "seed": 1169,
+   "file": "mind_169.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 170,
+   "name": "Kara",
+   "flask": 1,
+   "gen": 80,
+   "fitness": 174.58334962624878,
+   "seed": 1170,
+   "file": "mind_170.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 171,
+   "name": "Grace",
+   "flask": 1,
+   "gen": 81,
+   "fitness": 138.52685054648018,
+   "seed": 1171,
+   "file": "mind_171.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 172,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 82,
+   "fitness": 238.57650202476927,
+   "seed": 1172,
+   "file": "mind_172.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 173,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 83,
+   "fitness": 343.4680248670422,
+   "seed": 1173,
+   "file": "mind_173.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 174,
+   "name": "Frank",
+   "flask": 1,
+   "gen": 84,
+   "fitness": 204.4971251576423,
+   "seed": 1174,
+   "file": "mind_174.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 175,
+   "name": "Carol",
+   "flask": 1,
+   "gen": 85,
+   "fitness": 159.83862960038246,
+   "seed": 1175,
+   "file": "mind_175.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 176,
+   "name": "Eve",
+   "flask": 1,
+   "gen": 86,
+   "fitness": 190.0839656353195,
+   "seed": 1176,
+   "file": "mind_176.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 177,
+   "name": "Heidi",
+   "flask": 1,
+   "gen": 87,
+   "fitness": 120.2515827420404,
+   "seed": 1177,
+   "file": "mind_177.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 178,
+   "name": "Alice",
+   "flask": 1,
+   "gen": 88,
+   "fitness": 0.0,
+   "seed": 1178,
+   "file": "mind_178.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 179,
+   "name": "Ruth",
+   "flask": 1,
+   "gen": 89,
+   "fitness": 163.87846801354632,
+   "seed": 1179,
+   "file": "mind_179.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 180,
+   "name": "Niaj",
+   "flask": 1,
+   "gen": 90,
+   "fitness": 186.03826359243283,
+   "seed": 1180,
+   "file": "mind_180.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 181,
+   "name": "Bob",
+   "flask": 1,
+   "gen": 91,
+   "fitness": 215.98326647801,
+   "seed": 1181,
+   "file": "mind_181.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 182,
+   "name": "Ivan",
+   "flask": 1,
+   "gen": 92,
+   "fitness": 216.55742726454048,
+   "seed": 1182,
+   "file": "mind_182.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 183,
+   "name": "Heidi",
+   "flask": 1,
+   "gen": 93,
+   "fitness": 197.44890410317836,
+   "seed": 1183,
+   "file": "mind_183.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 184,
+   "name": "Dave",
+   "flask": 1,
+   "gen": 94,
+   "fitness": 180.79268776810864,
+   "seed": 1184,
+   "file": "mind_184.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 185,
+   "name": "Ruth",
+   "flask": 1,
+   "gen": 95,
+   "fitness": 137.2280570140019,
+   "seed": 1185,
+   "file": "mind_185.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 186,
+   "name": "Niaj",
+   "flask": 1,
+   "gen": 96,
+   "fitness": 180.097060139038,
+   "seed": 1186,
+   "file": "mind_186.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 187,
+   "name": "Oscar",
+   "flask": 1,
+   "gen": 97,
+   "fitness": 166.41802774638901,
+   "seed": 1187,
+   "file": "mind_187.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 188,
+   "name": "Trent",
+   "flask": 1,
+   "gen": 98,
+   "fitness": 162.94295200162514,
+   "seed": 1188,
+   "file": "mind_188.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 189,
+   "name": "Mallory",
+   "flask": 1,
+   "gen": 99,
+   "fitness": 132.51597696776466,
+   "seed": 1189,
+   "file": "mind_189.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 190,
+   "name": "Kara",
+   "flask": 1,
+   "gen": 100,
+   "fitness": 233.757596470259,
+   "seed": 1190,
+   "file": "mind_190.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 191,
+   "name": "Ruth",
+   "flask": 1,
+   "gen": 101,
+   "fitness": 146.383897054217,
+   "seed": 1191,
+   "file": "mind_191.hwrm",
+   "bytes": 46816
+  },
+  {
+   "id": 192,
+   "name": "Ivan",
+   "flask": 1,
+   "gen": 102,
+   "fitness": 162.95844465330399,
+   "seed": 1192,
+   "file": "mind_192.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 193,
+   "name": "Frank",
+   "flask": 1,
+   "gen": 103,
+   "fitness": 258.3056191513226,
+   "seed": 1193,
+   "file": "mind_193.hwrm",
+   "bytes": 46832
+  },
+  {
+   "id": 194,
+   "name": "Judy",
+   "flask": 1,
+   "gen": 104,
+   "fitness": 189.87249318120772,
+   "seed": 1194,
+   "file": "mind_194.hwrm",
+   "bytes": 46832
+  }
+ ],
+ "shared": "shared.hwrm"
+}

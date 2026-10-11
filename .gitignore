@@ -1,0 +1,28 @@
+# Unity
+Library/
+Temp/
+Obj/
+Logs/
+UserSettings/
+.utmp/
+*.csproj
+*.sln
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+.vs/
+.vscode/
+
+# build outputs (Build/ and build/ are the same folder on macOS: APKs, generator caches, downloaded models)
+Build/
+build/
+
+# python / tooling
+__pycache__/
+*.pyc
+tools/wormsim_test/bin/
+
+# mac
+.DS_Store

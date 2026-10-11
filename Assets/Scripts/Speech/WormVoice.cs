@@ -59,8 +59,10 @@ namespace Speech
         {
             if (string.IsNullOrWhiteSpace(word)) return;
             var w = word.Trim().Trim('.', ',', '!', '?', ';', ':', '"', '(', ')', '[', ']', '-');
-            bool hasLetter = false; foreach (var ch in w) if (char.IsLetter(ch)) { hasLetter = true; break; }
+            bool hasLetter = false, hasVowel = false; foreach (var ch in w) { if (char.IsLetter(ch)) hasLetter = true; if ("aeiouyAEIOUY".IndexOf(ch) >= 0) hasVowel = true; }
             if (!hasLetter) return;
+            var low = w.ToLowerInvariant();
+            if ((w.Length == 1 && low != "a" && low != "i" && low != "o") || (!hasVowel && w.IndexOf('\'') < 0)) return;   // stray letters, not words
             _pending.Add(w);
             _lastWord = Time.time;
             ShowPending();

@@ -50,6 +50,27 @@ from bake import Blob, pack  # noqa: E402
 
 import numpy as np  # noqa: E402
 from corpus.hamlet import get_sentences_with_flags  # noqa: E402
+import collections, re  # noqa: E402
+
+_JUNK = {"www", "nj", "pg", "re", "co", "et", "se", "e", "ii", "iii", "iv", "vi", "vii", "viii", "ix", "xi", "xii"}
+
+
+def is_junk_token(t: str) -> bool:
+    """A token with letters that is not a word of the play."""
+    core = t.strip(".,;:!?\"()[]-").strip("'")
+    if not re.search(r"[A-Za-z]", core):
+        return False                      # punctuation: fine, eaten silently
+    low = core.lower()
+    if low in _JUNK:
+        return True
+    if len(low) == 1 and low not in ("a", "i", "o"):
+        return True
+    if re.fullmatch(r"[ivx]+", low) and low != "i":
+        return True
+    if not re.search(r"[aeiouy]", low) and "'" not in t:
+        return True                       # no vowel and no elision: not a word
+    return False
+
 from server import embedding, pos_scorers  # noqa: E402
 from sim import connectome as conn  # noqa: E402
 from sim.chemosensory_mapping import PC_NEURON_PAIRS  # noqa: E402
@@ -90,6 +111,17 @@ class Shared:
 
         # -- corpus -------------------------------------------------------------
         sentences, edible = get_sentences_with_flags(passage)
+        # The Gutenberg text carries stray tokens that are not words of the play (single letters
+        # from headings, Roman numerals, "www", "PG"...). The worms eat and recite them, so they
+        # are dropped here, before the corpus is laid out. Punctuation and elisions ("th'") stay.
+        kept, dropped = [], collections.Counter()
+        for s_ in sentences:
+            ws = [t for t in s_ if not is_junk_token(t)]
+            dropped.update(t for t in s_ if is_junk_token(t))
+            kept.append(ws if ws else s_)
+        sentences = kept
+        if dropped:
+            log(f"corpus  dropped {sum(dropped.values())} junk tokens: {dict(dropped.most_common(12))}")
         widx = model._widx
         tok_vocab, tok_pos, tok_text, sent_start = [], [], [], [0]
         for s in sentences:

@@ -1,7 +1,7 @@
 Shader "Burrow/Translucent"
 {
     // Vertex-coloured, alpha blended, two-sided: the worm's skin, thin enough to see the neurons inside.
-    Properties { _Color ("Tint", Color) = (1, 1, 1, 1) }
+    Properties { _Color ("Tint", Color) = (1, 1, 1, 1) _Solid ("Solidity", Float) = 1 }
     SubShader
     {
         Tags { "RenderType" = "Transparent" "Queue" = "Transparent+5" }
@@ -14,7 +14,7 @@ Shader "Burrow/Translucent"
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
-            fixed4 _Color;
+            fixed4 _Color; float _Solid;
             struct appdata { float4 vertex : POSITION; float3 normal : NORMAL; fixed4 color : COLOR; UNITY_VERTEX_INPUT_INSTANCE_ID };
             struct v2f { float4 pos : SV_POSITION; fixed4 color : COLOR; float3 wnrm : TEXCOORD0; float3 wpos : TEXCOORD1; UNITY_VERTEX_OUTPUT_STEREO };
             v2f vert (appdata v)
@@ -30,7 +30,7 @@ Shader "Burrow/Translucent"
                 float rim = pow(1 - saturate(dot(n, V)), 2.0);
                 fixed4 c = i.color;
                 c.rgb *= 0.75 + 0.45 * rim;
-                c.a *= 0.28 + 0.6 * rim;                             // see-through in the middle, solid at the edges
+                c.a = saturate(c.a * (0.28 + 0.6 * rim) * _Solid);   // see-through in the middle, solid at the edges
                 return c;
             }
             ENDCG

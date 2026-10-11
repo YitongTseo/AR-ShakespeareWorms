@@ -12,6 +12,7 @@ namespace Burrow
     //   PINCH inside the text world: one hand moves it; two hands move and turn it.
     //   PINCH held anywhere else: push-to-talk (Listener). Release to send.
     //   FLICK the index finger through a bubble (a fast swipe, no pinch): it flies home.
+    //   TOUCH a tab under the text world with an index fingertip: x-ray, senses, chemo on/off.
     public class Interaction : MonoBehaviour
     {
         public MinimalHandVisualizer hands;
@@ -55,7 +56,15 @@ namespace Burrow
             if (loader == null || !loader.IsLoaded) return;
             for (int i = 0; i < 2; i++) Pinch(i);
             GrabWorld();
-            for (int i = 0; i < 2; i++) { Point(i); Flick(i); }
+            for (int i = 0; i < 2; i++) { Point(i); Flick(i); Touch(i); }
+        }
+
+        // ------------------------------------------------------------------ touch: the view tabs
+        void Touch(int i)
+        {
+            var world = TextWorld.Instance; if (world == null || world.Toggles == null) return;
+            bool valid = hands.TryGetJoint(i, UnityEngine.XR.Hands.XRHandJointID.IndexTip, out var tip) && !_h[i].down;
+            world.Toggles.Touch(i, valid, tip);
         }
 
         void Cancel(Hand h)

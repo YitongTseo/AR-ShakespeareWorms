@@ -71,12 +71,13 @@ namespace Burrow
         readonly Vector3[] _v; readonly Color[] _c; readonly Vector2[] _uv;
         readonly float[] _axial, _lateral, _ring;     // anatomy: along, across, and a fixed angle round the body
         readonly bool[] _muscle;
+        readonly float[] _grow;                       // per-neuron size: class and firing, in x-ray colours
 
         public NeuronGlow(WmAsset a, int seed)
         {
             _n = a.NNeurons;
             _v = new Vector3[_n * 4]; _c = new Color[_n * 4]; _uv = new Vector2[_n * 4];
-            _axial = new float[_n]; _lateral = new float[_n]; _ring = new float[_n]; _muscle = new bool[_n];
+            _axial = new float[_n]; _lateral = new float[_n]; _ring = new float[_n]; _muscle = new bool[_n]; _grow = new float[_n];
             var tris = new int[_n * 6];
             var rng = new System.Random(seed);
             for (int i = 0; i < _n; i++)
@@ -84,7 +85,7 @@ namespace Burrow
                 if (a.NeuronAxial != null && a.NeuronAxial[i] >= 0f) { _axial[i] = a.NeuronAxial[i]; _lateral[i] = a.NeuronLateral[i]; }
                 else { _axial[i] = (float)rng.NextDouble(); _lateral[i] = (float)(rng.NextDouble() * 2 - 1); }
                 _ring[i] = (float)(rng.NextDouble() * 6.2831853);
-                _muscle[i] = a.IsMuscle[i] != 0;
+                _muscle[i] = a.IsMuscle[i] != 0; _grow[i] = 1f;
                 tris[i * 6] = i * 4; tris[i * 6 + 1] = i * 4 + 2; tris[i * 6 + 2] = i * 4 + 1;
                 tris[i * 6 + 3] = i * 4; tris[i * 6 + 4] = i * 4 + 3; tris[i * 6 + 5] = i * 4 + 2;
                 _uv[i * 4] = new Vector2(0, 0); _uv[i * 4 + 1] = new Vector2(1, 0); _uv[i * 4 + 2] = new Vector2(1, 1); _uv[i * 4 + 3] = new Vector2(0, 1);
@@ -105,21 +106,34 @@ namespace Burrow
                 TubeSkin.Frame(mid, count, i0, out _, out var n, out var bn);
                 float rr = bodyRadius * 0.7f * Mathf.Abs(_lateral[i]) + bodyRadius * 0.15f;
                 p += (n * Mathf.Cos(_ring[i]) + bn * Mathf.Sin(_ring[i])) * rr * 0.5f + n * _lateral[i] * bodyRadius * 0.55f;
-                float s = spriteSize * (_muscle[i] ? 0.6f : 1f);
+                float s = spriteSize * (_muscle[i] ? 0.6f : 1f) * _grow[i];
                 _v[i * 4] = p - right * s - up * s; _v[i * 4 + 1] = p + right * s - up * s;
                 _v[i * 4 + 2] = p + right * s + up * s; _v[i * 4 + 3] = p - right * s + up * s;
             }
             Mesh.vertices = _v; Mesh.RecalculateBounds();
         }
 
-        public void Recolor(WmBrain brain, Color tint)
+        // With `classes` the neurons take the viewer's x-ray colours (chemosensory cyan, sensory
+        // blue, motor orange, interneurons pale blue) and swell as they charge; without, the
+        // worm's own tint, which is what tells the bubbles apart.
+        public void Recolor(WmBrain brain, Color tint, NeuronClass[] classes = null)
         {
             var dim = new Color(0.25f, 0.35f, 0.6f, 0.35f);
             for (int i = 0; i < _n; i++)
             {
                 float act = Mathf.Clamp01((float)(brain.Activity(i) / WmConst.FireThreshold));
-                var c = Color.Lerp(dim, tint, act); c.a = 0.4f + 0.6f * act;
-                if (_muscle[i]) c *= 0.6f;
+                Color c;
+                if (classes != null)
+                {
+                    NeuronClasses.Look(classes[i], out float hue, out float rest, out float size);
+                    c = Color.Lerp(Overlays.Hsl(hue, 0.85f, 0.6f, rest), Overlays.Hsl(hue, 1f, 0.6f, 1f), act);
+                    _grow[i] = size * (1f + 0.8f * act);
+                }
+                else
+                {
+                    c = Color.Lerp(dim, tint, act); c.a = 0.4f + 0.6f * act;
+                    if (_muscle[i]) c *= 0.6f;
+                }
                 _c[i * 4] = _c[i * 4 + 1] = _c[i * 4 + 2] = _c[i * 4 + 3] = c;
             }
             Mesh.colors = _c;

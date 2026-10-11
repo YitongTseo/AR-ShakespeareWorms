@@ -6,7 +6,8 @@ using WormSim;
 namespace Burrow
 {
     // One mind living in the shared TextWorld: its simulation, its body drawn as a tube that
-    // burrows through the volume's depth, and its voice at the body's position.
+    // burrows through the volume's depth, and its voice at the body's position. The Overlays
+    // switches add its connectome (x-ray) and the lines to the words it smells (senses).
     public class WormAgent : MonoBehaviour
     {
         public BMind Mind { get; private set; }
@@ -22,6 +23,11 @@ namespace Burrow
         TextWorld _w;
         float _acc, _seed;
         TubeSkin _skin; NeuronGlow _glow;
+        Material _skinMat; GameObject _neurons, _senseGo;
+        NeuronClass[] _classes;
+        SenseLines _lines;
+        bool _xray;
+        public readonly WormSenses Senses = new WormSenses();
         readonly List<WmEaten> _eaten = new List<WmEaten>();
         readonly Vector3[] _mid = new Vector3[Points];
         long _lastBrain = -1;
@@ -52,13 +58,36 @@ namespace Burrow
             _skin = new TubeSkin(Points, Sides);
             gameObject.AddComponent<MeshFilter>().sharedMesh = _skin.Mesh;
             var mr = gameObject.AddComponent<MeshRenderer>();
-            mr.sharedMaterial = new Material(Shader.Find("Burrow/Translucent"));
+            mr.sharedMaterial = _skinMat = new Material(Shader.Find("Burrow/Translucent"));
             mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             _glow = new NeuronGlow(World.Asset, Mind.id);
-            var g = new GameObject("neurons"); g.transform.SetParent(transform, false);
-            g.AddComponent<MeshFilter>().sharedMesh = _glow.Mesh;
-            g.AddComponent<MeshRenderer>().sharedMaterial = new Material(Shader.Find("Burrow/Glow"));
-            _glow.Recolor(World.Brain, Tint);
+            _classes = NeuronClasses.Classify(World.Asset);
+            _neurons = Child("neurons", transform, _glow.Mesh, new Material(Shader.Find("Burrow/Glow")));
+            _neurons.GetComponent<MeshRenderer>().sharedMaterial.SetFloat("_Core", 0.12f);      // keep the class colours: no white-hot centres
+            _lines = new SenseLines();
+            _senseGo = new GameObject("senses"); _senseGo.transform.SetParent(transform, false);
+            Child("lines", _senseGo.transform, _lines.Lines, new Material(Shader.Find("Burrow/Dash")));
+            Child("smelled", _senseGo.transform, _lines.Dots, new Material(Shader.Find("Burrow/Glow")));
+            _senseGo.SetActive(false);
+            _xray = !Overlays.XRay; ApplyXRay();
+        }
+
+        static GameObject Child(string name, Transform parent, Mesh mesh, Material mat)
+        {
+            var g = new GameObject(name); g.transform.SetParent(parent, false);
+            g.AddComponent<MeshFilter>().sharedMesh = mesh;
+            g.AddComponent<MeshRenderer>().sharedMaterial = mat;
+            return g;
+        }
+
+        // X-ray on: the skin thins to a ghost and the connectome shows through. Off: just the animal.
+        void ApplyXRay()
+        {
+            if (_xray == Overlays.XRay) return;
+            _xray = Overlays.XRay;
+            _neurons.SetActive(_xray);
+            _skinMat.SetFloat("_Solid", _xray ? 0.18f : 1f);
+            if (_xray) _glow.Recolor(World.Brain, Tint, _classes);
         }
 
         public int Midline(Vector3[] outLocal)   // in TextWorld local space, depth included
@@ -70,6 +99,7 @@ namespace Burrow
 
         void Update()
         {
+            ApplyXRay();
             _acc += Mathf.Min(Time.deltaTime, 0.1f);
             int steps = 0;
             while (_acc >= (float)WmConst.BodyDt && steps < 6) { World.Tick(); _acc -= (float)WmConst.BodyDt; steps++; }
@@ -79,7 +109,7 @@ namespace Burrow
                 foreach (var e in _eaten) Voice.Speak(World.TokenText(e.Tok));
                 _eaten.Clear();
             }
-            if (World.BrainTickCount != _lastBrain) { _lastBrain = World.BrainTickCount; _glow.Recolor(World.Brain, Tint); BrainTicked?.Invoke(); }
+            if (World.BrainTickCount != _lastBrain) { _lastBrain = World.BrainTickCount; if (_xray) _glow.Recolor(World.Brain, Tint, _classes); BrainTicked?.Invoke(); }
 
             // burrow through the thickness: slow wander in depth, head leads, body trails
             float t = Time.time * 0.07f + _seed;
@@ -95,7 +125,12 @@ namespace Burrow
             _skin.Update(_mid, BodyRadius, Tint, 0.9f);
             var cam = Camera.main;
             var toViewer = cam != null ? transform.InverseTransformDirection((cam.transform.position - transform.position).normalized) : Vector3.back;
-            _glow.Place(_mid, Points, BodyRadius, 2.6f * _w.Scale * 1.6f, toViewer);
+            if (_xray) _glow.Place(_mid, Points, BodyRadius, 2.6f * _w.Scale * 1.6f, toViewer);
+
+            if (Overlays.Senses || Overlays.Chemo) Senses.Sample(World); else Senses.Count = 0;
+            _senseGo.SetActive(Overlays.Senses);
+            if (Overlays.Senses && cam != null)
+                _lines.Update(Senses, _w, World.Asset, _mid, BodyRadius, transform.InverseTransformPoint(cam.transform.position));
         }
 
     }

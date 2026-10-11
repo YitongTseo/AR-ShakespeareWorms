@@ -40,6 +40,7 @@ namespace Burrow
         float _acc;
         bool _placed;
 
+        public ViewToggles Toggles { get; private set; }
         public byte[] SharedBytes => _shared;
         public WmScroller Scroller => _scroller;
 
@@ -59,6 +60,8 @@ namespace Burrow
             back.GetComponent<Renderer>().sharedMaterial = new Material(Shader.Find("Burrow/Panel")) { color = new Color(0f, 0f, 0.01f, 0.55f) };
             Frame();
             _wordRoot = new GameObject("words").transform; _wordRoot.SetParent(_visual, false);
+            // the view switches hang just under the front bottom edge, within a finger's reach
+            Toggles = ViewToggles.Create(_visual, new Vector3(0f, -LocalBounds.extents.y + 0.015f, -Depth * 0.5f));
             _grab = gameObject.AddComponent<BoxCollider>();
             _grab.size = LocalBounds.size; _grab.isTrigger = true; _grab.enabled = false;
             _visual.gameObject.SetActive(false);

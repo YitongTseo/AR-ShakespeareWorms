@@ -34,3 +34,8 @@ python3 tools/speech/vocab.py                                       # extended t
    crawls over Hamlet and speaks what it eats; its 300 neurons glow beside it. Up to five open.
 4. Hold a pinch (either hand) and speak; let go. Your words drift into every open worm's field.
 5. Hold both pinches for two seconds to re-place the network.
+6. Touch a tab under the text world with a fingertip to switch a view (X / O / C on a keyboard):
+   **x-ray** shows each worm's connectome through its skin, coloured by class (chemosensory cyan,
+   sensory blue, motor orange); **senses** draws dashed lines from a worm's nose to the words it
+   can smell; **chemo** opens a card by each bubble with the 12 chemosensory pairs and the words
+   feeding each neuron. A word keeps one colour across its line and its bar segments.

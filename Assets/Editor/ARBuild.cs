@@ -40,7 +40,7 @@ public static class ARBuild
     static readonly string[] AlwaysIncludeShaders =
     {
         "Burrow/Tunnel", "Burrow/Dome", "Burrow/DomeInner", "Burrow/Panel",
-        "Burrow/Unlit", "Burrow/Text", "Burrow/VertexColor", "Burrow/Glow", "Burrow/Translucent",       // hand joints, prompts, pop-up text (no built-ins: see IncludeShaders)
+        "Burrow/Unlit", "Burrow/Text", "Burrow/VertexColor", "Burrow/Glow", "Burrow/Translucent", "Burrow/Dash",       // hand joints, prompts, pop-up text (no built-ins: see IncludeShaders)
     };
 
     public static void Build()

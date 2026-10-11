@@ -39,6 +39,7 @@ namespace Burrow
             b.Agent = w.Admit(dome.Mind, mindBytes, dome.WorldCenter);
             b.Agent.Bubble = b;
             b.Agent.BrainTicked += b.Recolor;
+            ChemoPanel.Create(b, w);
             b.StartCoroutine(b.FlyTo(w.SlotPosition(b.Slot), 2.6f, null));
             return b;
         }

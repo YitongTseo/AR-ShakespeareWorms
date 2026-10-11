@@ -83,12 +83,16 @@ namespace Burrow
             if (gain > 1.01f) for (int k = 0; k < pcm.Length; k++) pcm[k] = Mathf.Clamp(pcm[k] * gain, -1f, 1f);
             Debug.Log($"[Speech] captured {pos / (float)sampleRate:F1}s, rms {rms:F4}, peak {peak:F3}, gain x{gain:F1}, device '{(Microphone.devices.Length > 0 ? Microphone.devices[0] : "none")}'");
             Vector3 at = hand == 0 ? hands.LeftPinchPos : hands.RightPinchPos;
+            if (peak < 0.012f) { Caption("(nothing heard)", at, 1.5f); return; }     // a held pinch with no speech
             Caption("...", at, 4f);
             SpeechEngine.Instance.Transcribe(pcm, sampleRate, text =>
             {
-                Caption(string.IsNullOrEmpty(text) ? "(nothing heard)" : text, at, 4f);
-                Debug.Log($"[Speech] heard: \"{text}\"");
-                ConversationBus.Publish(text);
+                // whisper's blank-audio markers and single stray characters are not speech
+                int letters = 0; foreach (var ch in text) if (char.IsLetter(ch)) letters++;
+                bool junk = text.Contains("[") || letters < 2;
+                Caption(junk ? "(nothing heard)" : text, at, 4f);
+                Debug.Log($"[Speech] heard: \"{text}\"{(junk ? " (ignored)" : "")}");
+                if (!junk) ConversationBus.Publish(text);
             });
         }
 
